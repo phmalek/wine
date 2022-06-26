@@ -8,11 +8,12 @@ jobs:
     runs-on: [ubuntu-latest]
     container: docker://dvcorg/cml-py3:latest
     steps:
-      - uses: actions/checkout@v2
-      - name: cml_run
-        env:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir test_folder
+      - name: Build and Push Docker Image
+        uses: mr-smithers-excellent/docker-build-push@v4
+        with:
+          image: onvsoff/wine
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
 
