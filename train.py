@@ -4,6 +4,7 @@ from sklearn.ensemble import RandomForestRegressor
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+import bentoml
 # Set random seed
 seed = 42
 
@@ -83,3 +84,5 @@ plt.xlim((2.5,8.5))
 plt.tight_layout()
 plt.savefig("residuals.png",dpi=120) 
 
+saved_model = bentoml.sklearn.save_model("wine_clf", regr)
+print(f"Model saved: {saved_model}")
