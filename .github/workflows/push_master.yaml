@@ -6,10 +6,11 @@ on:
 jobs:
   run:
     runs-on: [ubuntu-latest]
+    container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/setup-python@v2
       - name: Install BentoML
         run: |
-          docker pull bentoml/bento-server
+            bentoml --version
 
 
