@@ -10,8 +10,6 @@ jobs:
       - uses: actions/setup-python@v2
       - name: Install BentoML
         run: |
-          PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python
-          pip install bentoml
-          bentoml --version
+          docker pull bentoml/bento-server
 
 
