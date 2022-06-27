@@ -8,7 +8,7 @@ jobs:
     runs-on: [ubuntu-latest]
     steps:
       - name: Install BentoML
-      - run: |
+        run: |
           pip install bentoml
           bentoml --version
 
