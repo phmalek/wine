@@ -1,0 +1,13 @@
+service: "service.py:svc"
+labels:
+  owner: mindtech
+  project: cicdML
+include:
+- "*.py"
+python:
+  packages:
+    - scikit-learn
+    - pandas
+    - matplotlib
+    - seaborn
+    - numpy
