@@ -1,7 +1,8 @@
 name: model-wine-quality
 on:
     push:
-        branches: [CI-pipeline]
+        branches-ignore: 
+            - master
     
 jobs:
   run:
