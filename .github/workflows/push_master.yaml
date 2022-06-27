@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-python@v2
       - name: Install BentoML
         run: |
+            sudo apt-get install python3-dev
             pip install -r https://raw.githubusercontent.com/bentoml/gallery/main/quickstart/requirements.txt
 
 
