@@ -1,5 +1,6 @@
 pandas
-scikit-learn
+sklearn
 matplotlib
 seaborn
 numpy
+bentoml>=1.0.0a
