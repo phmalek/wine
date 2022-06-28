@@ -83,6 +83,9 @@ plt.xlim((2.5,8.5))
 
 plt.tight_layout()
 plt.savefig("residuals.png",dpi=120) 
-
-#saved_model = bentoml.sklearn.save_model("wine_clf", regr)
-#print(f"Model saved: {saved_model}")
+try:
+    import bentoml 
+    saved_model = bentoml.sklearn.save_model("wine_clf", regr)
+    print(f"Model saved: {saved_model}")
+except:
+    pass
