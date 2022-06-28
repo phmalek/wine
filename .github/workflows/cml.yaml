@@ -1,4 +1,4 @@
-name: model-wine-quality
+name: Test-Before-Merge-PR
 on:
     push:
         branches-ignore: 
@@ -10,7 +10,7 @@ jobs:
     container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v2
-      - name: cml_run
+      - name: TestViz
         env:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
         run: |
