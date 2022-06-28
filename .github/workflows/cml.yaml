@@ -1,9 +1,8 @@
 name: Test-Before-Merge-PR
 on:
     push:
-        branches-ignore: 
+        branches-ignore:
             - master
-    
 jobs:
   run:
     runs-on: [ubuntu-latest]

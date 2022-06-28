@@ -1,6 +1,9 @@
-name: CI
+name: Containerize-Push-DockerHub
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
   tests:
